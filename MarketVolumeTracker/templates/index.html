@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沪深两市成交额监控</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>沪深两市成交额监控系统</h1>
+            <p id="last-update">最后更新时间: 加载中...</p>
+        </header>
+
+        <div class="market-summary">
+            <div class="summary-card">
+                <h2>沪深两市总成交额</h2>
+                <div class="value" id="total-volume">--</div>
+                <div class="change" id="volume-change">较昨日: --</div>
+            </div>
+            <div class="summary-card">
+                <h2>上证指数</h2>
+                <div class="value" id="sh-index">--</div>
+                <div class="change" id="sh-change">--</div>
+            </div>
+            <div class="summary-card">
+                <h2>深证成指</h2>
+                <div class="value" id="sz-index">--</div>
+                <div class="change" id="sz-change">--</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-header">
+                <h2>今日成交额走势</h2>
+                <div class="chart-legend">
+                    <span class="legend-item"><span class="color-dot today"></span>今日</span>
+                    <span class="legend-item"><span class="color-dot yesterday"></span>昨日</span>
+                </div>
+            </div>
+            <div id="hourly-chart" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-header">
+                <h2>近30日成交额趋势</h2>
+            </div>
+            <div id="daily-chart" class="chart"></div>
+        </div>
+    </div>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html> 
